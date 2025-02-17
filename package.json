@@ -1,15 +1,15 @@
 {
-  "name": "mi-proyecto",
+  "name": "parcial1",
   "version": "1.0.0",
-  "description": "Descripción de mi proyecto",
+  "description": "Proyecto de ejemplo para GitHub Pages",
   "main": "index.html",
   "scripts": {
-    "start": "live-server"
+    "start": "live-server",
+    "build": "echo 'No build step required'"
   },
-  "author": "Tu Nombre",
+  "author": "Teo876",
   "license": "MIT",
   "devDependencies": {
     "live-server": "^1.2.1"
   }
 }
-
