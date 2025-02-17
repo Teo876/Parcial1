@@ -1,22 +1,19 @@
-{
-  "name": "mi-pagina-web",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "echo 'No build script defined'"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Teo876/Parcial1.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Teo876/Parcial1/issues"
-  },
-  "homepage": "https://github.com/Teo876/Parcial1#readme"
-}
+name: Deploy with Rsync
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy with Rsync
+        run: rsync -avz --delete ./path/to/your/files user@your-server:/path/to/destination
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
