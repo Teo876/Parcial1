@@ -2,13 +2,14 @@
   "name": "mi-proyecto",
   "version": "1.0.0",
   "description": "Descripción de mi proyecto",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "start": "node index.js"
+    "start": "live-server"
   },
   "author": "Tu Nombre",
   "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1"
+  "devDependencies": {
+    "live-server": "^1.2.1"
   }
 }
+
